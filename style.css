@@ -123,3 +123,45 @@ body {
   font-size: 2.5vw;
   font-weight: 300;
 }
+
+#scroll {
+  height: 40vh;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  padding: 1vw;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container {
+  height: 100%;
+  width: fit-content;
+  display: inline-block;
+  padding: 2vw;
+  animation: marquee;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.container img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin: 10px;
+}
+.container img:nth-last-child(1) {
+  margin: 0px;
+}
+.container:nth-child(2) img:first-child {
+  margin: 0px;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
